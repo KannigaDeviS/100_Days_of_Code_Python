@@ -5,5 +5,19 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
                      "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado",
                      "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma",
                      "New Mexico", "Arizona", "Alaska", "Hawaii"]
-
+print(len(states_of_america))
 print(states_of_america)
+#print(states_of_america[len(states_of_america)]) # index error
+
+fruits = ["Cherry", "Apple", "Pear"]
+veg =  ["Cucumber", "Kale", "Spinach"]
+fruits_and_veg = [fruits, veg]
+print(fruits_and_veg)
+print(fruits_and_veg[0])
+print(fruits_and_veg[1])
+
+print(len(fruits_and_veg[0]))
+print(len(fruits_and_veg[1]))
+
+print(fruits_and_veg[0][0])
+print(fruits_and_veg[1][0])

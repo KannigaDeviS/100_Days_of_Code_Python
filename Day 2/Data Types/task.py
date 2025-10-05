@@ -3,6 +3,8 @@ len("Hello")
 # Subscripting
 print("Hello"[0])
 print("Hello"[4])
+stringValue = "Hello"
+print(stringValue[0])
 
 # -ve numbers in Subscripting represents the string backwards
 print("Hello"[-1]) #prints o
