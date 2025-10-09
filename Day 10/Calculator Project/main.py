@@ -1,5 +1,5 @@
 import art
-print(art.logo)
+
 def add(n1, n2):
     return n1 + n2
 # TODO: Write out the other 3 functions - subtract, multiply and divide.
@@ -29,6 +29,7 @@ operator = 0
 result = 0
 while canContinue:
     if num1 == 0:
+        print(art.logo)
         num1 = int(input("Input the first number: "))
     operator = input("Type a mathematical operator: ")
     num2 = int(input("Input the second number: "))
@@ -38,5 +39,6 @@ while canContinue:
     if choice == "no":
         result = 0
         num1 = 0
+        print("\n"*20)
     else:
         num1 = result
