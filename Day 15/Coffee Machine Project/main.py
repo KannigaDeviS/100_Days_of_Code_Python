@@ -86,7 +86,7 @@ def insert_coins(choice):
 def make_coffee(choice):
     for i in MENU[choice]['ingredients']:
         resources[i] -=  MENU[choice]['ingredients'][i]
-    print("Here is your espresso ☕. Enjoy!")
+    print(f"Here is your {choice} ☕. Enjoy!")
 
 TurnOn = True
 while TurnOn:
