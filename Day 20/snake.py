@@ -1,19 +1,23 @@
-from turtle import Screen, Turtle
-import time
+from turtle import  Turtle
 
 class Snake:
     def __init__(self):
         self.x_axis = 20
         self.snake = []
         for s in range(3):
-            segment = Turtle(shape='square')
-            segment.width(20)
-            segment.color('white')
             self.x_axis -= 20
-            segment.penup()
-            segment.goto(self.x_axis, 0)
-            self.snake.append(segment)
+            self.add_segment(self.x_axis, 0)
         self.head = self.snake[0]
+
+    def add_segment(self, x_axis, y_axis):
+        segment = Turtle('square')
+        segment.color('white')
+        segment.penup()
+        segment.goto(x_axis, y_axis)
+        self.snake.append(segment)
+
+    def extend(self):
+        self.add_segment(self.snake[-1].xcor(), self.snake[-1].ycor())
 
     def move(self):
         for seg_num in range(len(self.snake) - 1, 0, -1):
@@ -37,4 +41,3 @@ class Snake:
     def down(self):
         if self.head.heading() != 90:
             self.head.setheading(270)
-
