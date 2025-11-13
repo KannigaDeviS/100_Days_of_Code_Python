@@ -4,10 +4,13 @@ class Snake:
     def __init__(self):
         self.x_axis = 20
         self.snake = []
+        self.create_snake()
+        self.head = self.snake[0]
+
+    def create_snake(self):
         for s in range(3):
             self.x_axis -= 20
             self.add_segment(self.x_axis, 0)
-        self.head = self.snake[0]
 
     def add_segment(self, x_axis, y_axis):
         segment = Turtle('square')
@@ -18,6 +21,13 @@ class Snake:
 
     def extend(self):
         self.add_segment(self.snake[-1].xcor(), self.snake[-1].ycor())
+
+    def reset(self):
+        for s in self.snake:
+            s.goto (100,100)
+        self.snake.clear()
+        self.create_snake()
+        self.head = self.snake[0]
 
     def move(self):
         for seg_num in range(len(self.snake) - 1, 0, -1):
