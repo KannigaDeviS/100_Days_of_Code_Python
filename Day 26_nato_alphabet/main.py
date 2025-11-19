@@ -32,3 +32,5 @@ print(list(user_input))
 phonetic_code = [nato_dict[letter] for letter in list(user_input.upper())]
 print(phonetic_code)
 
+
+
